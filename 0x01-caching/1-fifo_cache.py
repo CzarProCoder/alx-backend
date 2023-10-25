@@ -36,5 +36,6 @@ class FIFOCache(BaseCaching):
         ''' Get value from the Cache_data dict
         base on the the key
         '''
-        return self.cache_data.get(key)
-    
+        if key in self.cache_data:
+            return self.cache_data[key]
+        return None
