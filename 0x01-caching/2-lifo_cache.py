@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-''' Module defining child class FIFOCache
+''' Module defining child class LIFOCache
 '''
 
 BaseCaching = __import__('base_caching').BaseCaching
