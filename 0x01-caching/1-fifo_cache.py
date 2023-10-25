@@ -14,16 +14,21 @@ class FIFOCache(BaseCaching):
         '''
         super().__init__()
         self.key_indexes = []
-    
+
     def put(self, key, item):
         ''' Put a value item to the Cache_data dict
         based on the key
         '''
         if key and item:
+            if key in self.cache_data:
+                self.cache_data[key] = item
+                return key
+
             if len(self.cache_data) >= BaseCaching.MAX_ITEMS:
-                print(f'DISCARD: {key}')
                 item_discarded = self.key_indexes.pop(0)
                 del self.cache_data[item_discarded]
+                print("DISCARD:", item_discarded)
+
             self.cache_data[key] = item
             self.key_indexes.append(key)
 
@@ -32,3 +37,4 @@ class FIFOCache(BaseCaching):
         base on the the key
         '''
         return self.cache_data.get(key)
+    
