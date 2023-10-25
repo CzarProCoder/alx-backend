@@ -32,7 +32,6 @@ class LIFOCache(BaseCaching):
             self.cache_data[key] = item
             self.key_indexes.append(key)
 
-
     def get(self, key):
         ''' Get value from the Cache_data dict
         base on the the key
