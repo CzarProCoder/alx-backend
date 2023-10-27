@@ -4,7 +4,7 @@
 '''
 
 
-def index_range(page, page_size):
+def index_range(page: int, page_size: int) -> tuple:
     '''
     Returns the start index and end_index based on th
     page and page_size of a given dataset
