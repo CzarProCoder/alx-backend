@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
 
 '''
+Module to return the start index of desired page items within
+a dataset
 '''
 
 
-def index_range(page: int, page_size: int) -> tuple:
+def index_range(page: int, page_size: int) -> tuple[int, int]:
     '''
     Returns the start index and end_index based on th
     page and page_size of a given dataset
