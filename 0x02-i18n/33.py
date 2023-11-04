@@ -26,9 +26,6 @@ def get_locale():
     '''
     Determine the best match with out selected language
     '''
-    locale = request.args.get('locale')
-    if locale:
-        return locale
     return request.accept_languages.best_match(app.config['LANGUAGES'])
 
 
@@ -37,7 +34,7 @@ def index():
     '''
     Render the index file from templates folder
     '''
-    return render_template('4-index.html')
+    return render_template('3-index.html')
 
 
 if __name__ == '__main__':
