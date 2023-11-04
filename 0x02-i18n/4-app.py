@@ -37,7 +37,7 @@ def index(param):
     '''
     Render the index file from templates folder
     '''
-    return render_template('3-index.html')
+    return render_template('4-index.html')
 
 
 if __name__ == '__main__':
