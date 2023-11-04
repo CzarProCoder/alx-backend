@@ -4,9 +4,6 @@ Entry point to the flask app
 '''
 from flask import Flask, render_template, request
 from flask_babel import Babel
-from jinja2 import Environment, FileSystemLoader
-
-env = Environment(loader=FileSystemLoader('templates'), autoescape=True)
 
 app = Flask(__name__)
 babel = Babel(app)
